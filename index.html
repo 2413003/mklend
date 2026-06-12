@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mk lend</title>
     <style>
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap");
-
 :root {
   --blue: #0866ff;
   --blue-soft: #eef4ff;
@@ -56,35 +54,6 @@ button {
   grid-template-columns: 206px minmax(560px, 1fr) 384px;
   min-height: 100vh;
   background: var(--surface);
-}
-
-.boot-fallback {
-  grid-column: 1 / -1;
-  display: grid;
-  min-height: 100vh;
-  place-items: center;
-  padding: 32px;
-  color: var(--muted);
-  text-align: center;
-}
-
-.boot-brand {
-  display: block;
-  margin-bottom: 10px;
-  color: #101828;
-  font-size: 30px;
-  font-weight: 780;
-  line-height: 1;
-}
-
-.boot-brand span {
-  color: var(--blue);
-}
-
-.boot-fallback p {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 560;
 }
 
 .side {
@@ -749,10 +718,286 @@ button {
   </head>
   <body>
     <div id="app" class="app-shell">
-      <main class="boot-fallback" role="status" aria-live="polite">
-        <span class="boot-brand"><span>mk</span> lend</span>
-        <p>Loading marketplace...</p>
-      </main>
+    <aside class="side">
+      <a class="brand" href="#" aria-label="mk lend home"><span>mk</span><span class="brand-rest">lend</span></a>
+      <nav class="nav" aria-label="Primary">
+        
+              <button class="nav-button is-active" type="button">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9.5V21h14V9.5"></path><path d="M9 21v-7h6v7"></path></svg>
+                <span>Home</span>
+              </button>
+            
+              <button class="nav-button " type="button">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+                <span>Browse</span>
+              </button>
+            
+              <button class="nav-button " type="button">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l3 3v15H5V3h3Z"></path><path d="M9 13h6"></path><path d="M9 17h5"></path><path d="M15 3v4h4"></path></svg>
+                <span>Requests</span>
+              </button>
+            
+              <button class="nav-button " type="button">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5.4-8.5 10.2-8.5 10.2S3.5 14.2 3.5 8.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.8Z"></path></svg>
+                <span>Saved</span>
+              </button>
+            
+      </nav>
+      <div class="rail-title">Categories</div>
+      <div class="categories" role="list">
+        
+              <button class="category is-active" type="button" data-category="All">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
+                <span>All</span>
+              </button>
+            
+              <button class="category " type="button" data-category="Tools">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-3-3 2.4-2.4Z"></path></svg>
+                <span>Tools</span>
+              </button>
+            
+              <button class="category " type="button" data-category="Outdoor">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18L12 4 3 20Z"></path><path d="M12 4v16"></path><path d="m7 20 5-8 5 8"></path></svg>
+                <span>Outdoor</span>
+              </button>
+            
+              <button class="category " type="button" data-category="Sports">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M4.8 6.8c4.5 1 8.5 5 9.4 12.9"></path><path d="M19.2 6.8c-4.5 1-8.5 5-9.4 12.9"></path></svg>
+                <span>Sports</span>
+              </button>
+            
+              <button class="category " type="button" data-category="Audio">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="10" height="10" rx="2"></rect><path d="M17 9.5 21 7v10l-4-2.5V9.5Z"></path></svg>
+                <span>Audio</span>
+              </button>
+            
+              <button class="category " type="button" data-category="Cleaning">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8"></path><path d="M10 21V9a2 2 0 1 1 4 0v12"></path><path d="M6 13h12l-1.5 8h-9L6 13Z"></path></svg>
+                <span>Cleaning</span>
+              </button>
+            
+              <button class="category " type="button" data-category="Events">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M8 3v4"></path><path d="M16 3v4"></path><path d="M4 10h16"></path></svg>
+                <span>Events</span>
+              </button>
+            
+      </div>
+      <button class="help" type="button" aria-label="Help">
+        <span>?</span>
+        <span>Help</span>
+      </button>
+    </aside>
+    <main class="market">
+      <header class="topbar">
+        <label class="search">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+          <input type="search" id="search" placeholder="Search for items to lend" autocomplete="off" value="">
+        </label>
+        <button class="location" type="button">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+          <span><strong>Milton Keynes</strong><small>Within 10 km</small></span>
+        </button>
+        <button class="circle-button" type="button" aria-label="Notifications"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg></button>
+        <button class="avatar" type="button" aria-label="Profile">GB</button>
+      </header>
+      <div class="mobile-cats" role="list">
+        
+              <button class="mobile-cat is-active" type="button" data-category="All">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
+                <span>All</span>
+              </button>
+            
+              <button class="mobile-cat " type="button" data-category="Tools">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-3-3 2.4-2.4Z"></path></svg>
+                <span>Tools</span>
+              </button>
+            
+              <button class="mobile-cat " type="button" data-category="Outdoor">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18L12 4 3 20Z"></path><path d="M12 4v16"></path><path d="m7 20 5-8 5 8"></path></svg>
+                <span>Outdoor</span>
+              </button>
+            
+              <button class="mobile-cat " type="button" data-category="Sports">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M4.8 6.8c4.5 1 8.5 5 9.4 12.9"></path><path d="M19.2 6.8c-4.5 1-8.5 5-9.4 12.9"></path></svg>
+                <span>Sports</span>
+              </button>
+            
+              <button class="mobile-cat " type="button" data-category="Audio">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="10" height="10" rx="2"></rect><path d="M17 9.5 21 7v10l-4-2.5V9.5Z"></path></svg>
+                <span>Audio</span>
+              </button>
+            
+              <button class="mobile-cat " type="button" data-category="Cleaning">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8"></path><path d="M10 21V9a2 2 0 1 1 4 0v12"></path><path d="M6 13h12l-1.5 8h-9L6 13Z"></path></svg>
+                <span>Cleaning</span>
+              </button>
+            
+              <button class="mobile-cat " type="button" data-category="Events">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M8 3v4"></path><path d="M16 3v4"></path><path d="M4 10h16"></path></svg>
+                <span>Events</span>
+              </button>
+            
+      </div>
+      <section class="grid" id="grid" aria-label="Items">
+        <article class="item-card is-selected" data-id="drill">
+          <button class="item-photo" type="button" aria-label="Drill Kit" style="background-position: 0% 0%;">
+            <span class="distance"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>2.1 km</span>
+            <span class="dot" aria-hidden="true"></span>
+          </button>
+          <div class="item-meta">
+            <button class="item-name" type="button">Drill Kit</button>
+            <button class="save " type="button" aria-label="Save Drill Kit">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5.4-8.5 10.2-8.5 10.2S3.5 14.2 3.5 8.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.8Z"></path></svg>
+            </button>
+            <span class="price">£3 / day</span>
+          </div>
+        </article>
+      
+        <article class="item-card " data-id="ladder">
+          <button class="item-photo" type="button" aria-label="Step Ladder" style="background-position: 33.333% 0%;">
+            <span class="distance"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>1.4 km</span>
+            <span class="dot" aria-hidden="true"></span>
+          </button>
+          <div class="item-meta">
+            <button class="item-name" type="button">Step Ladder</button>
+            <button class="save " type="button" aria-label="Save Step Ladder">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5.4-8.5 10.2-8.5 10.2S3.5 14.2 3.5 8.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.8Z"></path></svg>
+            </button>
+            <span class="price">£2 / day</span>
+          </div>
+        </article>
+      
+        <article class="item-card " data-id="projector">
+          <button class="item-photo" type="button" aria-label="Projector" style="background-position: 66.666% 0%;">
+            <span class="distance"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>3.2 km</span>
+            <span class="dot" aria-hidden="true"></span>
+          </button>
+          <div class="item-meta">
+            <button class="item-name" type="button">Projector</button>
+            <button class="save " type="button" aria-label="Save Projector">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5.4-8.5 10.2-8.5 10.2S3.5 14.2 3.5 8.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.8Z"></path></svg>
+            </button>
+            <span class="price">£5 / day</span>
+          </div>
+        </article>
+      
+        <article class="item-card " data-id="tent">
+          <button class="item-photo" type="button" aria-label="4P Tent" style="background-position: 100% 0%;">
+            <span class="distance"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>2.7 km</span>
+            <span class="dot" aria-hidden="true"></span>
+          </button>
+          <div class="item-meta">
+            <button class="item-name" type="button">4P Tent</button>
+            <button class="save " type="button" aria-label="Save 4P Tent">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5.4-8.5 10.2-8.5 10.2S3.5 14.2 3.5 8.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.8Z"></path></svg>
+            </button>
+            <span class="price">£4 / day</span>
+          </div>
+        </article>
+      
+        <article class="item-card " data-id="bike-rack">
+          <button class="item-photo" type="button" aria-label="Bike Rack" style="background-position: 0% 100%;">
+            <span class="distance"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>2.3 km</span>
+            <span class="dot" aria-hidden="true"></span>
+          </button>
+          <div class="item-meta">
+            <button class="item-name" type="button">Bike Rack</button>
+            <button class="save " type="button" aria-label="Save Bike Rack">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5.4-8.5 10.2-8.5 10.2S3.5 14.2 3.5 8.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.8Z"></path></svg>
+            </button>
+            <span class="price">£3 / day</span>
+          </div>
+        </article>
+      
+        <article class="item-card " data-id="cleaner">
+          <button class="item-photo" type="button" aria-label="Carpet Cleaner" style="background-position: 33.333% 100%;">
+            <span class="distance"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>1.8 km</span>
+            <span class="dot" aria-hidden="true"></span>
+          </button>
+          <div class="item-meta">
+            <button class="item-name" type="button">Carpet Cleaner</button>
+            <button class="save " type="button" aria-label="Save Carpet Cleaner">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5.4-8.5 10.2-8.5 10.2S3.5 14.2 3.5 8.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.8Z"></path></svg>
+            </button>
+            <span class="price">£4 / day</span>
+          </div>
+        </article>
+      
+        <article class="item-card " data-id="table">
+          <button class="item-photo" type="button" aria-label="Folding Table" style="background-position: 66.666% 100%;">
+            <span class="distance"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>1.6 km</span>
+            <span class="dot" aria-hidden="true"></span>
+          </button>
+          <div class="item-meta">
+            <button class="item-name" type="button">Folding Table</button>
+            <button class="save " type="button" aria-label="Save Folding Table">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5.4-8.5 10.2-8.5 10.2S3.5 14.2 3.5 8.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.8Z"></path></svg>
+            </button>
+            <span class="price">£2 / day</span>
+          </div>
+        </article>
+      
+        <article class="item-card " data-id="lens">
+          <button class="item-photo" type="button" aria-label="50mm Lens" style="background-position: 100% 100%;">
+            <span class="distance"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>2.0 km</span>
+            <span class="dot" aria-hidden="true"></span>
+          </button>
+          <div class="item-meta">
+            <button class="item-name" type="button">50mm Lens</button>
+            <button class="save " type="button" aria-label="Save 50mm Lens">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5.4-8.5 10.2-8.5 10.2S3.5 14.2 3.5 8.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.8Z"></path></svg>
+            </button>
+            <span class="price">£3 / day</span>
+          </div>
+        </article>
+      </section>
+    </main>
+    <aside class="detail" id="detail" aria-live="polite">
+    <div class="detail-photo" style="background-position: 0% 0%;">
+      <button class="detail-close" type="button" aria-label="Close"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+    </div>
+    <div class="detail-head">
+      <div>
+        <h1>Drill Kit</h1>
+        <p>£3 / day</p>
+      </div>
+      <span>2.1 km <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span>
+    </div>
+    <div class="facts">
+      
+    <div class="fact">
+      <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M8 3v4"></path><path d="M16 3v4"></path><path d="M4 10h16"></path></svg>
+      <span><small>Available</small>Today</span>
+      <i class="fact-dot" aria-hidden="true"></i>
+    </div>
+  
+      
+    <div class="fact">
+      <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+      <span><small>Lender</small>James</span>
+      
+    </div>
+  
+      
+    <div class="fact">
+      <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+      <span><small>Location</small>MK6</span>
+      
+    </div>
+  
+      
+    <div class="fact">
+      <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+      <span><small>Response</small>2h</span>
+      
+    </div>
+  
+    </div>
+    <button class="request " type="button">
+      Request
+    </button>
+  </aside>
+  
     </div>
     <script>
 const items = [
@@ -1099,10 +1344,23 @@ function bindShellEvents() {
   });
 }
 
+function startApp() {
+  const app = document.querySelector("#app");
+  if (!app) return;
+
+  if (app.querySelector("#grid") && app.querySelector("#detail")) {
+    bindShellEvents();
+    renderGrid();
+    renderDetail();
+  } else {
+    renderShell();
+  }
+}
+
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", renderShell, { once: true });
+  document.addEventListener("DOMContentLoaded", startApp, { once: true });
 } else {
-  renderShell();
+  startApp();
 }
 
     </script>
