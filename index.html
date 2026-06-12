@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mk lend</title>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body>
-    <div id="app" class="app-shell"></div>
-    <script src="src/app.js" defer></script>
+    <div id="app" class="app-shell">
+      <main class="boot-fallback" role="status" aria-live="polite">
+        <span class="boot-brand"><span>mk</span> lend</span>
+        <p>Loading marketplace...</p>
+      </main>
+    </div>
+    <script src="./src/app.js" defer></script>
   </body>
 </html>
